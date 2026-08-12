@@ -14,6 +14,7 @@ GRID_X, GRID_Y = 48, 42
 
 # GitHub-like ramp. Empty days remain neutral; only real activity is green.
 PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
+PULSE = ["#161b22", "#146c43", "#00a24a", "#39d353", "#7ee787"]
 
 
 def main():
@@ -31,10 +32,16 @@ def main():
         level = max(0, min(4, int(d.get("level", 0))))
         color = PALETTE[level]
         delay = min(1.85, (col * 0.028) + (row * 0.052))
+        pulse_delay = ((col * 0.19) + (row * 0.31)) % 4.8
         title = f'{d["count"]} visible contributions on {d["date"]}'
 
-        # Final state is always visible. SMIL only animates the one-time entrance,
-        # so GitHub still has a clean static fallback if animation is unavailable.
+        animation = (
+            f'<animate attributeName="fill" values="{color};{PULSE[level]};{color}" '
+            f'dur="4.8s" begin="{pulse_delay:.2f}s" repeatCount="indefinite"/>'
+            if level > 0
+            else ""
+        )
+
         cells.append(
             f'<g>'
             f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="2" '
@@ -45,6 +52,7 @@ def main():
             f'<animateTransform attributeName="transform" type="translate" '
             f'from="0 -8" to="0 0" dur="0.36s" begin="{delay:.3f}s" '
             f'fill="freeze" additive="sum"/>'
+            f'{animation}'
             f'</rect>'
             f'</g>'
         )
@@ -61,6 +69,10 @@ def main():
 
 <rect width="100%" height="100%" rx="14" fill="#0d1117" stroke="#30363d"/>
 <text x="28" y="25" fill="#8b949e" font-size="12">Pedrssa / contributions</text>
+<circle cx="646" cy="21" r="4" fill="#39d353">
+  <animate attributeName="opacity" values="1;.25;1" dur="1.4s" repeatCount="indefinite"/>
+</circle>
+<text x="656" y="25" fill="#7ee787" font-size="10">live</text>
 
 <g>
 {''.join(cells)}

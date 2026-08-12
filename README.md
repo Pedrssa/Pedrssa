@@ -4,6 +4,10 @@
 
 <div align="center">
 
+<img src="./terminal-status.svg" width="860" alt="Animated terminal status" />
+
+<br><br>
+
 <h3><code>pedrssa@github ~ $ ./contributions.sh</code></h3>
 <img src="./contrib-heatmap.svg" width="860" alt="Animated GitHub contribution heatmap" />
 
