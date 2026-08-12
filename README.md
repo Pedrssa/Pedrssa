@@ -4,7 +4,7 @@
 
 <div align="center">
 
-<img src="./terminal-status.svg" width="860" alt="Animated terminal status" />
+<img src="./terminal-motion.svg" width="860" alt="Animated terminal status" />
 
 <br><br>
 
@@ -18,7 +18,7 @@
 <table>
 <tr>
 <td valign="top"><img src="./pedrssa-ascii.svg" width="370" alt="ASCII portrait generated from my profile photo" /></td>
-<td valign="top"><img src="./info-card.svg" width="490" alt="Pedro Henrique Martins neofetch profile card" /></td>
+<td valign="top"><img src="./profile-card-motion.svg" width="490" alt="Pedro Henrique Martins neofetch profile card" /></td>
 </tr>
 </table>
 
