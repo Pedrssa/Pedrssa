@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from datetime import date, datetime, timedelta
 from pathlib import Path
 
@@ -11,14 +12,34 @@ USERNAME = "Pedrssa"
 URL = f"https://github.com/users/{USERNAME}/contributions"
 OUT = Path("data/contributions.json")
 
+COUNT_RE = re.compile(r"([\d,]+)\s+contributions?\b", re.IGNORECASE)
 
-def _parse_day(node):
+
+def _count_from_tooltip(soup: BeautifulSoup, node) -> int:
+    node_id = node.get("id")
+    if node_id:
+        tip = soup.find("tool-tip", attrs={"for": node_id})
+        if tip:
+            text = tip.get_text(" ", strip=True)
+            if text.lower().startswith("no contribution"):
+                return 0
+            match = COUNT_RE.search(text)
+            if match:
+                return int(match.group(1).replace(",", ""))
+
+    count_raw = node.get("data-count")
+    if count_raw and str(count_raw).isdigit():
+        return int(count_raw)
+
+    return 0
+
+
+def _parse_day(soup: BeautifulSoup, node):
     day = node.get("data-date")
     if not day:
         return None
 
-    count_raw = node.get("data-count")
-    count = int(count_raw) if count_raw and str(count_raw).isdigit() else 0
+    count = _count_from_tooltip(soup, node)
 
     level_raw = node.get("data-level", "0")
     try:
@@ -59,15 +80,14 @@ def main():
     headers = {
         "User-Agent": "Pedrssa-profile-readme/1.0 (+https://github.com/Pedrssa)",
         "Accept": "text/html,application/xhtml+xml",
+        "Accept-Language": "en-US,en;q=0.9",
     }
     response = requests.get(URL, headers=headers, timeout=30)
     response.raise_for_status()
 
     soup = BeautifulSoup(response.text, "html.parser")
-    nodes = soup.select(
-        "td.ContributionCalendar-day[data-date], rect.ContributionCalendar-day[data-date]"
-    )
-    days = [d for node in nodes if (d := _parse_day(node))]
+    nodes = soup.select("td.ContributionCalendar-day[data-date]")
+    days = [d for node in nodes if (d := _parse_day(soup, node))]
 
     if not days:
         raise RuntimeError("No contribution cells found; GitHub markup may have changed.")
@@ -87,7 +107,7 @@ def main():
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Wrote {OUT} with {len(days)} days")
+    print(f"Wrote {OUT} with {len(days)} days and {total} contributions")
 
 
 if __name__ == "__main__":
