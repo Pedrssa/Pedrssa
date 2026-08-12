@@ -4,10 +4,10 @@
 
 <div align="center">
 
-<h3><code>pedrssa@github ~ $ ./public-contributions.sh</code></h3>
-<img src="./contrib-heatmap.svg" width="900" alt="Public GitHub contribution heatmap" />
+<h3><code>pedrssa@github ~ $ ./activity.sh</code></h3>
+<img src="./contrib-heatmap.svg" width="900" alt="Animated GitHub contribution activity" />
 
-<sub>Public contribution data available without authentication. GitHub's native graph can also include private activity.</sub>
+<sub>Contribution activity visualization · private repository details remain private.</sub>
 
 <br><br>
 
