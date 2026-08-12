@@ -10,6 +10,10 @@
 
 <img src="./info-card.svg" width="680" alt="Pedro Henrique Martins profile card" />
 
+<br><br>
+
+<img src="./activity-live.svg" width="900" alt="Subtle animated terminal activity" />
+
 </div>
 
 ---
