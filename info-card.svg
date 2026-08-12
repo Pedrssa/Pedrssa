@@ -1,15 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="490" height="265" viewBox="0 0 490 265">
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="340" viewBox="0 0 520 340">
 <style>
   text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size:14px; }
   @keyframes line { from { opacity:0; transform:translateX(-8px); } to { opacity:1; transform:translateX(0); } }
 </style>
-<rect width="489" height="264" x=".5" y=".5" rx="14" fill="#0d1117" stroke="#30363d"/>
+<rect width="519" height="339" x=".5" y=".5" rx="14" fill="#0d1117" stroke="#30363d"/>
 <circle cx="22" cy="22" r="5" fill="#ff5f56"/><circle cx="40" cy="22" r="5" fill="#ffbd2e"/><circle cx="58" cy="22" r="5" fill="#27c93f"/>
 <text x="82" y="27" fill="#8b949e" font-size="12">pedrssa@github:~</text>
-<text x="30" y="54" fill="#3fb950">$ neofetch --profile</text>
-<g style="animation:line .45s ease 0.25s both"><text x="30" y="82" fill="#58a6ff" font-weight="700">    user</text><text x="128" y="82" fill="#c9d1d9">: Pedrssa</text></g>
-<g style="animation:line .45s ease 0.41s both"><text x="30" y="113" fill="#58a6ff" font-weight="700">    name</text><text x="128" y="113" fill="#c9d1d9">: Pedro Henrique Martins</text></g>
-<g style="animation:line .45s ease 0.57s both"><text x="30" y="144" fill="#58a6ff" font-weight="700">   focus</text><text x="128" y="144" fill="#c9d1d9">: software · automation · product</text></g>
-<g style="animation:line .45s ease 0.73s both"><text x="30" y="175" fill="#58a6ff" font-weight="700">building</text><text x="128" y="175" fill="#c9d1d9">: Delta · tools · experiments</text></g>
-<g style="animation:line .45s ease 0.89s both"><text x="30" y="206" fill="#58a6ff" font-weight="700">  github</text><text x="128" y="206" fill="#c9d1d9">: github.com/Pedrssa</text></g>
+<text x="30" y="56" fill="#3fb950">$ neofetch --profile</text>
+<g style="animation:line .45s ease .20s both"><text x="30" y="88" fill="#58a6ff" font-weight="700">    user</text><text x="138" y="88" fill="#c9d1d9">: Pedrssa</text></g>
+<g style="animation:line .45s ease .34s both"><text x="30" y="120" fill="#58a6ff" font-weight="700">    name</text><text x="138" y="120" fill="#c9d1d9">: Pedro Henrique Martins</text></g>
+<g style="animation:line .45s ease .48s both"><text x="30" y="152" fill="#58a6ff" font-weight="700">   focus</text><text x="138" y="152" fill="#c9d1d9">: software · automation · product</text></g>
+<g style="animation:line .45s ease .62s both"><text x="30" y="184" fill="#58a6ff" font-weight="700">building</text><text x="138" y="184" fill="#c9d1d9">: Delta · Olhe o Preço · CONTENTOS</text></g>
+<g style="animation:line .45s ease .76s both"><text x="30" y="216" fill="#58a6ff" font-weight="700">   stack</text><text x="138" y="216" fill="#c9d1d9">: React · Node · Python · PostgreSQL</text></g>
+<g style="animation:line .45s ease .90s both"><text x="30" y="248" fill="#58a6ff" font-weight="700">    base</text><text x="138" y="248" fill="#c9d1d9">: Salvador · BA · Brazil</text></g>
+<g style="animation:line .45s ease 1.04s both"><text x="30" y="280" fill="#58a6ff" font-weight="700"> privacy</text><text x="138" y="280" fill="#c9d1d9">: production repos remain private</text></g>
+<g style="animation:line .45s ease 1.18s both"><text x="30" y="312" fill="#58a6ff" font-weight="700">  github</text><text x="138" y="312" fill="#c9d1d9">: github.com/Pedrssa</text></g>
 </svg>
