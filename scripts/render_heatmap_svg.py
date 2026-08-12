@@ -27,7 +27,7 @@ def main():
         y = GRID_Y + row * (CELL + GAP)
         level = max(0, min(4, int(d.get("level", 0))))
         delay = min(1.6, (col + row) * 0.018)
-        title = f'{d["count"]} contributions on {d["date"]}'
+        title = f'{d["count"]} public contributions on {d["date"]}'
         cells.append(
             f'<g style="animation:reveal .38s ease-out {delay:.3f}s both">'
             f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="2" fill="{PALETTE[level]}">'
@@ -35,7 +35,7 @@ def main():
         )
 
     footer = (
-        f'{data.get("total", 0):,} contributions · '
+        f'{data.get("total", 0):,} public contributions · '
         f'current streak {data.get("current_streak", 0)}d · '
         f'longest {data.get("longest_streak", 0)}d'
     )
@@ -46,7 +46,7 @@ def main():
   @keyframes reveal {{ from {{ opacity:0; transform:translateY(-8px); }} to {{ opacity:1; transform:translateY(0); }} }}
 </style>
 <rect width="100%" height="100%" rx="14" fill="#0d1117" stroke="#30363d"/>
-<text x="28" y="24" fill="#8b949e" font-size="12">Pedrssa / contributions</text>
+<text x="28" y="24" fill="#8b949e" font-size="12">Pedrssa / public contributions</text>
 {''.join(cells)}
 <text x="28" y="174" fill="#8b949e" font-size="11">{escape(footer)}</text>
 </svg>'''
