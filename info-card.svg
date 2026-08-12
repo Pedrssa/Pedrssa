@@ -1,18 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="520" height="340" viewBox="0 0 520 340">
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="310" viewBox="0 0 680 310">
 <style>
-  text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size:14px; }
-  @keyframes line { from { opacity:0; transform:translateX(-8px); } to { opacity:1; transform:translateX(0); } }
+  text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  .line { animation: reveal .35s ease both; }
+  @keyframes reveal { from { opacity:0; transform:translateY(5px); } to { opacity:1; transform:translateY(0); } }
 </style>
-<rect width="519" height="339" x=".5" y=".5" rx="14" fill="#0d1117" stroke="#30363d"/>
-<circle cx="22" cy="22" r="5" fill="#ff5f56"/><circle cx="40" cy="22" r="5" fill="#ffbd2e"/><circle cx="58" cy="22" r="5" fill="#27c93f"/>
-<text x="82" y="27" fill="#8b949e" font-size="12">pedrssa@github:~</text>
-<text x="30" y="56" fill="#3fb950">$ neofetch --profile</text>
-<g style="animation:line .45s ease .20s both"><text x="30" y="88" fill="#58a6ff" font-weight="700">    user</text><text x="138" y="88" fill="#c9d1d9">: Pedrssa</text></g>
-<g style="animation:line .45s ease .34s both"><text x="30" y="120" fill="#58a6ff" font-weight="700">    name</text><text x="138" y="120" fill="#c9d1d9">: Pedro Henrique Martins</text></g>
-<g style="animation:line .45s ease .48s both"><text x="30" y="152" fill="#58a6ff" font-weight="700">   focus</text><text x="138" y="152" fill="#c9d1d9">: software · automation · product</text></g>
-<g style="animation:line .45s ease .62s both"><text x="30" y="184" fill="#58a6ff" font-weight="700">building</text><text x="138" y="184" fill="#c9d1d9">: Delta · Olhe o Preço · CONTENTOS</text></g>
-<g style="animation:line .45s ease .76s both"><text x="30" y="216" fill="#58a6ff" font-weight="700">   stack</text><text x="138" y="216" fill="#c9d1d9">: React · Node · Python · PostgreSQL</text></g>
-<g style="animation:line .45s ease .90s both"><text x="30" y="248" fill="#58a6ff" font-weight="700">    base</text><text x="138" y="248" fill="#c9d1d9">: Salvador · BA · Brazil</text></g>
-<g style="animation:line .45s ease 1.04s both"><text x="30" y="280" fill="#58a6ff" font-weight="700"> privacy</text><text x="138" y="280" fill="#c9d1d9">: production repos remain private</text></g>
-<g style="animation:line .45s ease 1.18s both"><text x="30" y="312" fill="#58a6ff" font-weight="700">  github</text><text x="138" y="312" fill="#c9d1d9">: github.com/Pedrssa</text></g>
+
+<rect x=".5" y=".5" width="679" height="309" rx="16" fill="#0d1117" stroke="#30363d"/>
+
+<circle cx="24" cy="23" r="5" fill="#ff5f56"/>
+<circle cx="42" cy="23" r="5" fill="#ffbd2e"/>
+<circle cx="60" cy="23" r="5" fill="#27c93f"/>
+<text x="88" y="28" fill="#8b949e" font-size="13">pedrssa@github:~</text>
+
+<g class="line" style="animation-delay:.10s">
+  <text x="34" y="68" fill="#3fb950" font-size="16">$ whoami</text>
+</g>
+<g class="line" style="animation-delay:.22s">
+  <text x="34" y="101" fill="#f0f6fc" font-size="20" font-weight="700">Pedro Henrique Martins</text>
+</g>
+<g class="line" style="animation-delay:.34s">
+  <text x="34" y="130" fill="#8b949e" font-size="14">software · automation · products</text>
+</g>
+
+<line x1="34" y1="153" x2="646" y2="153" stroke="#21262d"/>
+
+<g class="line" style="animation-delay:.46s">
+  <text x="34" y="187" fill="#58a6ff" font-size="14">stack</text>
+  <text x="124" y="187" fill="#c9d1d9" font-size="14">React · Node.js · Python · PostgreSQL</text>
+</g>
+<g class="line" style="animation-delay:.58s">
+  <text x="34" y="219" fill="#58a6ff" font-size="14">building</text>
+  <text x="124" y="219" fill="#c9d1d9" font-size="14">Delta · Olhe o Preço · CONTENTOS</text>
+</g>
+<g class="line" style="animation-delay:.70s">
+  <text x="34" y="251" fill="#58a6ff" font-size="14">base</text>
+  <text x="124" y="251" fill="#c9d1d9" font-size="14">Salvador · BA · Brasil</text>
+</g>
+
+<text x="34" y="286" fill="#3fb950" font-size="15">$</text>
+<rect x="52" y="274" width="9" height="15" rx="1" fill="#39d353">
+  <animate attributeName="opacity" values="1;1;0;0;1" dur="1.15s" repeatCount="indefinite"/>
+</rect>
 </svg>
