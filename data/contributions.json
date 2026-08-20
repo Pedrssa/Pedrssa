@@ -1,8 +1,8 @@
 {
   "username": "Pedrssa",
-  "generated_at": "2026-08-19T07:08:42Z",
+  "generated_at": "2026-08-20T07:09:29Z",
   "total": 812,
-  "current_streak": 1,
+  "current_streak": 0,
   "longest_streak": 6,
   "best_day": {
     "date": "2026-07-23",
@@ -1329,6 +1329,11 @@
       "date": "2026-08-13",
       "count": 9,
       "level": 1
+    },
+    {
+      "date": "2026-08-20",
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2025-08-22",
