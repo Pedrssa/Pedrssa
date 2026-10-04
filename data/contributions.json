@@ -1,8 +1,8 @@
 {
   "username": "Pedrssa",
-  "generated_at": "2026-10-03T11:47:33Z",
-  "total": 1412,
-  "current_streak": 6,
+  "generated_at": "2026-10-04T12:28:59Z",
+  "total": 1414,
+  "current_streak": 1,
   "longest_streak": 10,
   "best_day": {
     "date": "2026-07-23",
@@ -10,11 +10,6 @@
     "level": 4
   },
   "days": [
-    {
-      "date": "2025-09-28",
-      "count": 0,
-      "level": 0
-    },
     {
       "date": "2025-10-05",
       "count": 0,
@@ -276,9 +271,9 @@
       "level": 1
     },
     {
-      "date": "2025-09-29",
-      "count": 0,
-      "level": 0
+      "date": "2026-10-04",
+      "count": 2,
+      "level": 1
     },
     {
       "date": "2025-10-06",
@@ -541,11 +536,6 @@
       "level": 2
     },
     {
-      "date": "2025-09-30",
-      "count": 0,
-      "level": 0
-    },
-    {
       "date": "2025-10-07",
       "count": 0,
       "level": 0
@@ -804,11 +794,6 @@
       "date": "2026-09-29",
       "count": 23,
       "level": 1
-    },
-    {
-      "date": "2025-10-01",
-      "count": 0,
-      "level": 0
     },
     {
       "date": "2025-10-08",
@@ -1071,11 +1056,6 @@
       "level": 2
     },
     {
-      "date": "2025-10-02",
-      "count": 0,
-      "level": 0
-    },
-    {
       "date": "2025-10-09",
       "count": 0,
       "level": 0
@@ -1336,11 +1316,6 @@
       "level": 2
     },
     {
-      "date": "2025-10-03",
-      "count": 0,
-      "level": 0
-    },
-    {
       "date": "2025-10-10",
       "count": 0,
       "level": 0
@@ -1599,11 +1574,6 @@
       "date": "2026-10-02",
       "count": 30,
       "level": 2
-    },
-    {
-      "date": "2025-10-04",
-      "count": 0,
-      "level": 0
     },
     {
       "date": "2025-10-11",
